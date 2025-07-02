@@ -1,0 +1,44 @@
+.
+├── docker-compose.yml
+├── Dockerfile
+├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── example
+│       │           └── rabbitmq
+│       │               ├── application
+│       │               │   └── ServicioMensajeria.java
+│       │               ├── configuration
+│       │               │   └── RabbitConfig.java
+│       │               ├── domain
+│       │               │   ├── model
+│       │               │   │   └── Mensaje.java
+│       │               │   └── port
+│       │               │       ├── in
+│       │               │       │   └── ServicioMensajeriaInputPort.java
+│       │               │       └── out
+│       │               │           ├── EnviarMensajeOutputPort.java
+│       │               │           └── GuardarMensajeOutputPort.java
+│       │               ├── infrastructure
+│       │               │   ├── in
+│       │               │   │   ├── controller
+│       │               │   │   │   └── MensajeController.java
+│       │               │   │   └── rabbit
+│       │               │   │       └── MensajeRabbitListener.java
+│       │               │   ├── out
+│       │               │   │   └── rabbit
+│       │               │   │       └── EnviarMensajeRabbitAdapter.java
+│       │               │   └── persistence
+│       │               │       ├── GuardarMensajePostgresAdapter.java
+│       │               │       ├── MensajeEntity.java
+│       │               │       └── MensajeJpaRepository.java
+│       │               ├── RabbitmqSpringbootHexagonalApplication.java
+│       │               └── ServletInitializer.java
+│       └── resources
+│           ├── application.properties
+│           ├── static
+│           └── templates
+└── structure.txt
+
+24 directories, 18 files
